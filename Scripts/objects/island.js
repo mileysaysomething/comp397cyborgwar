@@ -24,7 +24,7 @@ var objects;
         // public methods
         // Initializes variables and creates new objects
         Island.prototype.Start = function () {
-            this._dy = 0;
+            this._dy = 5;
             this.Reset();
         };
         // updates the game object every frame
@@ -35,16 +35,16 @@ var objects;
         // reset the objects location to some value
         Island.prototype.Reset = function () {
             this.x = Math.floor((Math.random() * (640 - this.width)) + this.halfWidth);
-            this.x = -this.width;
+            this.y = -this.height;
         };
         // move the object to some new location
         Island.prototype.Move = function () {
-            this.x += this._dx;
+            this.y += this._dy;
         };
         // check to see if some boundary has been passed
         Island.prototype.CheckBounds = function () {
             // check lower bounds
-            if (this.x >= 480 + this.width) {
+            if (this.y >= 480 + this.height) {
                 this.Reset();
             }
         };

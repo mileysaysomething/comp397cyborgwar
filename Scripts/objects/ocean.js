@@ -22,7 +22,7 @@ var objects;
         // private methods
         // reset the objects location to some value
         Ocean.prototype._reset = function () {
-            this.x = -850;
+            this.x = -860;
         };
         // move the object to some new location
         Ocean.prototype._move = function () {
