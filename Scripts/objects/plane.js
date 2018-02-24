@@ -70,21 +70,25 @@ var objects;
         };
         // updates the game object every frame
         Plane.prototype.Update = function () {
+            objects.Game.stage.removeChild(shape);
             this.Move();
             this.CheckBounds();
             this.frameCount = this.frameCount + 1;
             if (this.frameCount % 25 === 0) {
                 this.randomlyGenerateBullet();
             } //every 1 sec
-            if (this.frameCount % 25) {
-                objects.Game.stage.removeChild(shape);
-            }
+            if (this.frameCount % 50 === 0) {
+                this.Reset();
+            } //every 1 sec
             for (var key in bulletList) {
                 this.updateEntityBullet(bulletList[key]);
             }
         };
         // reset the objects location to some value
         Plane.prototype.Reset = function () {
+            for (var key in bulletList) {
+                delete bulletList[key];
+            }
         };
         // move the object to some new location
         //create a class that only moves bullets

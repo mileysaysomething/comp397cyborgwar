@@ -25,6 +25,9 @@ module objects {
     
     }
 
+
+
+
     public static Bullet (id,x,y,spdX,spdY,width,height){
       var asd = {
         x:x,
@@ -84,6 +87,8 @@ module objects {
     // updates the game object every frame
     public Update():void {
     
+      objects.Game.stage.removeChild(shape);
+
 
       this.Move();
       this.CheckBounds();
@@ -96,10 +101,12 @@ module objects {
                 
       }	//every 1 sec
      
-      if (this.frameCount % 25){
-        objects.Game.stage.removeChild(shape);
-
-      }
+      if(this.frameCount % 50 ===  0){
+        
+        this.Reset();                
+      
+      }	//every 1 sec
+     
         
             
     
@@ -118,7 +125,9 @@ module objects {
 
     // reset the objects location to some value
     public Reset():void {
-
+      for (var key in bulletList){
+        delete bulletList[key];
+      }
     }
 
     // move the object to some new location
