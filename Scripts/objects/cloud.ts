@@ -28,8 +28,8 @@ module objects {
     // reset the objects location to some value
     public Reset():void {
       this.x = Math.floor((Math.random() * (640 - this.width)) + this.halfWidth);
-      this.y = -this.height;
-      this._dx = Math.floor((Math.random() * 4) - 2);
+      this.y = -this.width;
+      this._dx = Math.floor((Math.random() * 10) - 10);
       this._dy = Math.floor((Math.random() * 5) + 5);
     }
 
@@ -42,7 +42,7 @@ module objects {
     // check to see if some boundary has been passed
     public CheckBounds():void {
       // check lower bounds
-      if(this.y >= 480 + this.height) {
+      if(this.x >= 480 + this.width) {
         this.Reset();
       }
     }

@@ -21,7 +21,7 @@
     {id: "ocean", src:"./Assets/images/fuji.gif"},
     {id: "plane", src:"./Assets/images/ninja.png"},
     {id: "island", src:"./Assets/images/island.png"},
-    {id: "cloud", src:"./Assets/images/cloud.png"}
+    {id: "cloud", src:"./Assets/images/enemy.png"}
   ];
 
   // preloads assets
