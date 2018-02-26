@@ -23,8 +23,8 @@ module scenes {
 
     // Initialize Game Variables and objects
     public Start(): void {
-      this._welcomeLabel = new objects.Label("Cyborg War", "60px", "bold", "#ffffff", 320, 240, true);
-      this._startButton = new objects.Button(this.assetManager, "startButton", 320, 340);
+      this._welcomeLabel = new objects.Label("Cyborg War", "60px", "bold", "#ffffff", 675, 240, true);
+      this._startButton = new objects.Button(this.assetManager, "startButton", 675, 340);
       this.Main();
     }
 

@@ -26,8 +26,8 @@ var scenes;
         // Public Methods
         // Initialize Game Variables and objects
         StartScene.prototype.Start = function () {
-            this._welcomeLabel = new objects.Label("Cyborg War", "60px", "bold", "#ffffff", 320, 240, true);
-            this._startButton = new objects.Button(this.assetManager, "startButton", 320, 340);
+            this._welcomeLabel = new objects.Label("Cyborg War", "60px", "bold", "#ffffff", 675, 240, true);
+            this._startButton = new objects.Button(this.assetManager, "startButton", 675, 340);
             this.Main();
         };
         StartScene.prototype.Update = function () {

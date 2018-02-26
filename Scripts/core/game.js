@@ -17,8 +17,9 @@
         { id: "backButton", src: "./Assets/images/backBtn.png" },
         { id: "ocean", src: "./Assets/images/fujiNew.png" },
         { id: "plane", src: "./Assets/images/ninja.png" },
-        { id: "island", src: "./Assets/images/island.png" },
-        { id: "cloud", src: "./Assets/images/enemy.png" }
+        { id: "island", src: "./Assets/images/Enemy2.png" },
+        { id: "cloud", src: "./Assets/images/enemy.png" },
+        { id: "ninjaBGM", src: "./Assets/audio/NinjaSoundEffect.mp3" }
     ];
     // preloads assets
     function Init() {

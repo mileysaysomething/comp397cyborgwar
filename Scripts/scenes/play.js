@@ -12,7 +12,6 @@ var scenes;
 (function (scenes) {
     var PlayScene = /** @class */ (function (_super) {
         __extends(PlayScene, _super);
-        // Public Properties
         // Constructor
         function PlayScene(assetManager) {
             var _this = _super.call(this, assetManager) || this;
@@ -33,6 +32,10 @@ var scenes;
             for (var count = 0; count < this._cloudNum; count++) {
                 this._clouds[count] = new objects.Cloud(this.assetManager);
             }
+            //loop sound of ninja
+            this._ninjaBGMSound = createjs.Sound.play("ninjaBGM");
+            this._ninjaBGMSound.loop = -1; // play forever
+            this._ninjaBGMSound.volume = 0.3;
             this.Main();
         };
         PlayScene.prototype.Update = function () {
