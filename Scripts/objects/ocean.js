@@ -22,22 +22,22 @@ var objects;
         // private methods
         // reset the objects location to some value
         Ocean.prototype._reset = function () {
-            this.x = -860;
+            this.x = 0;
         };
         // move the object to some new location
         Ocean.prototype._move = function () {
-            this.x += this._dx;
+            this.x -= this._dx;
         };
         // check to see if some boundary has been passed
         Ocean.prototype._checkBounds = function () {
-            if (this.x >= 0) {
+            if (this.x <= -1727.5) {
                 this._reset();
             }
         };
         // public methods
         // Initializes variables and creates new objects
         Ocean.prototype.Start = function () {
-            this._dx = 2;
+            this._dx = 2; //speed
             this._reset();
         };
         // updates the game object every frame

@@ -15,17 +15,18 @@ module objects {
 
     // reset the objects location to some value
     private _reset():void {
-      this.x = -860;
+      this.x = 0;
+      
     }
 
     // move the object to some new location
     private _move():void {
-      this.x += this._dx;
+      this.x -= this._dx;
     }
 
     // check to see if some boundary has been passed
     private _checkBounds():void {
-      if(this.x >= 0) {
+      if(this.x <= -1727.5) {
         this._reset();
       }
     }
@@ -34,7 +35,7 @@ module objects {
 
     // Initializes variables and creates new objects
     public Start():void {
-      this._dx = 2;
+      this._dx = 2; //speed
       this._reset();
     }
 
