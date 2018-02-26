@@ -15,9 +15,9 @@
 
   assetManifest = [
     {id: "clickMeButton", src:"./Assets/images/clickMeButton.png"},
-    {id: "startButton", src:"./Assets/images/startButton.png"},
+    {id: "startButton", src:"./Assets/images/startBtn.png"},
     {id: "nextButton", src:"./Assets/images/nextButton.png"},
-    {id: "backButton", src:"./Assets/images/backButton.png"},
+    {id: "backButton", src:"./Assets/images/backBtn.png"},
     {id: "ocean", src:"./Assets/images/fujiNew.png"},
     {id: "plane", src:"./Assets/images/ninja.png"},
     {id: "island", src:"./Assets/images/island.png"},
