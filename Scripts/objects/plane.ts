@@ -1,3 +1,4 @@
+
 module objects {
   var shape:createjs.Shape;
   let bulletList = {};
@@ -16,9 +17,7 @@ module objects {
     }
 
     // private methods
-
     // public methods
-
     // Initializes letiables and creates new objects
     public Start():void {
       this.y = 200;
@@ -43,6 +42,7 @@ module objects {
       };
       bulletList[id] = asd;
     }
+    
     
     randomlyGenerateBullet = function(){
       //Math.random() returns a number between 0 and 1
@@ -131,33 +131,59 @@ module objects {
     }
 
     // move the object to some new location
-
     //create a class that only moves bullets
     
 
-
-
-
     public Move():void {
-      this.x = objects.Game.stage.mouseX;      
-      this.y = objects.Game.stage.mouseY;
-          
+      //  this.x = objects.Game.stage.mouseX;      
+       // this.y = objects.Game.stage.mouseY;
+  
+       
+        // mouse controls
+        // this.x = objects.Game.stage.mouseX;
+        // keyboard controls
+        if(objects.Game.keyboardManager.moveLeft) {
+          this.x -= 5;
+        }
+   
+        if(objects.Game.keyboardManager.moveRight) {
+          this.x += 5;
+        }
+   
+        if(objects.Game.keyboardManager.moveForward) {
+          this.y -= 5;
+        }
+   
+        if(objects.Game.keyboardManager.moveBackward) {
+          this.y += 5;
+        }
+   
 
-    }
-
+       }
     
     
     // check to see if some boundary has been passed
     public CheckBounds():void {
       // right boundary
-      if(this.x >= 640 - this.halfWidth) {
-        this.x = 640 - this.halfWidth;
+      if(this.x >= 1350 - this.halfWidth) {
+        this.x = 1350 - this.halfWidth;
       }
 
       // left boundary
-      if(this.x <= this.halfWidth) {
-        this.x = this.halfWidth;
+      if(this.x <= 150 - this.halfWidth) {
+        this.x = 150 - this.halfWidth;
       }
+      //down boundary
+      if (this. y >= 510 - this.halfWidth){
+       // console.log(this.y);
+        this.y = 510 - this.halfWidth;
+      }
+
+      if (this. y <= 105 - this.halfWidth){
+        // console.log(this.y);
+         this.y = 105 - this.halfWidth;
+       }
+     
     }
   }
 }

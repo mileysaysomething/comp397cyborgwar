@@ -93,18 +93,42 @@ var objects;
         // move the object to some new location
         //create a class that only moves bullets
         Plane.prototype.Move = function () {
-            this.x = objects.Game.stage.mouseX;
-            this.y = objects.Game.stage.mouseY;
+            //  this.x = objects.Game.stage.mouseX;      
+            // this.y = objects.Game.stage.mouseY;
+            // mouse controls
+            // this.x = objects.Game.stage.mouseX;
+            // keyboard controls
+            if (objects.Game.keyboardManager.moveLeft) {
+                this.x -= 5;
+            }
+            if (objects.Game.keyboardManager.moveRight) {
+                this.x += 5;
+            }
+            if (objects.Game.keyboardManager.moveForward) {
+                this.y -= 5;
+            }
+            if (objects.Game.keyboardManager.moveBackward) {
+                this.y += 5;
+            }
         };
         // check to see if some boundary has been passed
         Plane.prototype.CheckBounds = function () {
             // right boundary
-            if (this.x >= 640 - this.halfWidth) {
-                this.x = 640 - this.halfWidth;
+            if (this.x >= 1350 - this.halfWidth) {
+                this.x = 1350 - this.halfWidth;
             }
             // left boundary
-            if (this.x <= this.halfWidth) {
-                this.x = this.halfWidth;
+            if (this.x <= 150 - this.halfWidth) {
+                this.x = 150 - this.halfWidth;
+            }
+            //down boundary
+            if (this.y >= 510 - this.halfWidth) {
+                // console.log(this.y);
+                this.y = 510 - this.halfWidth;
+            }
+            if (this.y <= 105 - this.halfWidth) {
+                // console.log(this.y);
+                this.y = 105 - this.halfWidth;
             }
         };
         return Plane;

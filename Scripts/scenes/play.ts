@@ -9,14 +9,14 @@ module scenes {
 
     // Public Properties
     private _ninjaBGMSound: createjs.AbstractSoundInstance;
-
+    
     // Constructor
     constructor(assetManager: createjs.LoadQueue) {
       super(assetManager);
 
       this.Start();
     }
-
+   
     // Private Mathods
 
 

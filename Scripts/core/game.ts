@@ -12,6 +12,7 @@
   let assetManifest: any[];
   let currentScene: objects.Scene;
   let currentState: number;
+  let keyboardManager: managers.Keyboard;
 
   assetManifest = [
     {id: "clickMeButton", src:"./Assets/images/clickMeButton.png"},
@@ -45,6 +46,10 @@
     objects.Game.stage = stage;
     objects.Game.currentScene = config.Scene.START;
     currentState = config.Scene.START;
+   
+    keyboardManager = new managers.Keyboard();
+    objects.Game.keyboardManager = keyboardManager;
+    
     Main();
   }
 
